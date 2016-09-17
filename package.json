@@ -1,0 +1,29 @@
+{
+  "name": "Kraken",
+  "version": "1.0.0",
+  "description": "A simple Jekyll boilerplate for front-end developers with everything you need to get started.",
+  "homepage": "https://github.com/rafaell-lycan/Kraken",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Rafaell Lycan <sonny.webdsg@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.4.1",
+    "browser-sync": "^2.16.0",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-gzip": "^1.4.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^7.1.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "require-dir": "^0.3.0",
+    "shelljs": "^0.7.4",
+    "yargs": "^5.0.0"
+  }
+}
