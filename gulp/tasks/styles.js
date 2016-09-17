@@ -26,7 +26,6 @@ gulp.task('styles', () =>
       title: '[styles] convert to css',
       showFiles: true
     }))
-    .pipe(gulp.dest('src/_includes'))
     .pipe(when(argv.prod, rename({suffix: '.min'})))
     .pipe(when(argv.prod, when('*.css', cssnano({autoprefixer: false}))))
     .pipe(when(argv.prod, size({
