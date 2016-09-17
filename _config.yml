@@ -1,0 +1,60 @@
+# Site wide configuration
+
+source           : src
+destination      : dist
+
+title            : Your awesome title
+description      : Your awesome description right here!
+logo             : site-logo.png
+locale           : en_US
+
+baseurl: ""
+url: "http://yourdomain.com"
+
+# Site owner
+author:
+  name           : Rafaell Lycan
+  email          : sonny.webdsg@gmail.com
+  twitter        : RafaellLycan
+  github         : rafaell-lycan
+  avatar         : avatar.jpg # 160x160 px image for author byline
+
+# Jekyll configuration
+
+permalink        : pretty
+paginate         : 10
+paginate_path    : 'page:num'
+excerpt_separator: ''
+lsi              : false
+future           : true
+show_drafts      : true
+limit_posts      : 10
+highlighter      : rouge
+markdown         : kramdown
+
+keep_files:
+  - .git
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - Capfile
+  - Gemfile
+  - gulpfile.js
+  - LICENSE
+  - node_modules
+  - package.json
+  - assets
+  - README
+  - tmp
+
+# Plugins
+
+gems:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
