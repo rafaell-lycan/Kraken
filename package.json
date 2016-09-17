@@ -5,6 +5,9 @@
   "homepage": "https://github.com/rafaell-lycan/Kraken",
   "main": "index.js",
   "scripts": {
+    "clean": "gulp clean",
+    "build": "npm run clean && gulp build",
+    "dev": "npm run build && (gulp watch & browser-sync start --server=dist --files=dist/**/*.{html,js,css,jpg,jpeg,gif,png,svg,ogv,mp4} --no-open --no-notify --logLevel=info --port=${PORT:-3000})",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
