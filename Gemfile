@@ -1,6 +1,8 @@
 # Kraken Gemfile
 source "http://rubygems.org"
 
+ruby '~> 2.3'
+
 gem 'jekyll'
 
 # jekyll plugins
