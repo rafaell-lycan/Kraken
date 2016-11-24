@@ -3,7 +3,7 @@ const del  = require('del');
 const gulp = require('gulp');
 
 gulp.task('clean', () => {
-  return del(['dist']);
+  return del(['dist/**/*']);
 });
 
 gulp.task('clean:gzip', () => {
