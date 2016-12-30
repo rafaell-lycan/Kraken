@@ -1,46 +1,30 @@
-'use strict';
-const argv         = require('yargs').argv;
-const autoprefixer = require('autoprefixer');
-const browserSync  = require('browser-sync').get('kraken');
-const cssnano      = require('gulp-cssnano');
-const gulp         = require('gulp');
-const gzip         = require('gulp-gzip');
-const postcss      = require('gulp-postcss');
-const rename       = require('gulp-rename');
-const rev          = require('gulp-rev');
-const sass         = require('gulp-sass');
-const size         = require('gulp-size');
-const sourcemaps   = require('gulp-sourcemaps');
-const when         = require('gulp-if');
+import autoprefixer from 'autoprefixer';
+import config from '../../taskconfig';
+import $cssnano from 'gulp-cssnano';
+import gulp from 'gulp';
+import handleErrors from '../util/handleErrors';
+import $postcss from 'gulp-postcss';
+import plumber from 'gulp-plumber';
+import $sass from 'gulp-sass';
+import $size from 'gulp-size';
+import $sourcemaps from 'gulp-sourcemaps';
+import when from 'gulp-if';
 
-gulp.task('styles', () =>
-  gulp.src(['src/assets/scss/main.scss'])
-    .pipe(when(!argv.prod, sourcemaps.init()))
-    .pipe(sass({
-      precision: 10
-    }).on('error', sass.logError))
-    .pipe(postcss([
-      autoprefixer({browsers: ['last 2 versions', '> 5%', 'IE 9']})
-    ]))
-    .pipe(size({
-      title: '[styles] convert to css',
-      showFiles: true
-    }))
-    .pipe(when(argv.prod, rename({suffix: '.min'})))
-    .pipe(when(argv.prod, when('*.css', cssnano({autoprefixer: false}))))
-    .pipe(when(argv.prod, size({
-      title: '[styles] minify css',
-      showFiles: true
-    })))
-    .pipe(when(argv.prod, rev()))
-    .pipe(when(!argv.prod, sourcemaps.write('.')))
-    .pipe(when(argv.prod, gulp.dest('dist/assets/css')))
-    .pipe(when(argv.prod, when('*.css', gzip({append: true}))))
-    .pipe(when(argv.prod, size({
-      title: '[styles] generate gzip files',
-      gzip: true,
-      showFiles: true
-    })))
-    .pipe(gulp.dest('dist/assets/css'))
-    .pipe(when(!argv.prod, browserSync.stream()))
-);
+/**
+ * Compiles and deploys stylesheets.
+ *
+ * @param {boolean} debug
+ */
+gulp.task('styles', () => {
+    return gulp.src(config.styles.entry)
+      .pipe(plumber())
+      .pipe(when(config.env.debug, $sourcemaps.init()))
+      .pipe($sass(config.styles.options))
+      .on('error', handleErrors)
+      .pipe($postcss([autoprefixer(config.styles.autoprefixer)]))
+      .pipe($size({ title: '[styles]', showFiles: true}))
+      .pipe(when(!config.env.debug, when('*.css', $cssnano({autoprefixer: false}))))
+      .pipe(when(config.env.debug, $sourcemaps.write('.')))
+      .pipe($size({ title: '[styles:app]', gzip: true }))
+      .pipe(gulp.dest(config.styles.output));
+});
