@@ -1,6 +1,11 @@
-_site
+node_modules
+bower_components
+src/_assets/vendor
+dist
+npm-debug*
+Gemfile.lock
+.DS_STORE
 .sass-cache
 .jekyll-metadata
-node_modules
-dist
-Gemfile.lock
+.ruby-version
+!.keep

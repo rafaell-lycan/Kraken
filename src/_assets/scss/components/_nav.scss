@@ -1,0 +1,35 @@
+.nav {
+  margin-left: auto;
+
+  &__list {
+    font-size: 1rem;
+    display: flex;
+    margin: 0;
+    list-style: none;
+    align-items: center;
+  }
+
+  a:not(.btn) {
+    color: #333;
+
+    &:hover {
+      color: #45c55f;
+    }
+  }
+}
+
+// NEW
+.main-nav {
+  position: relative;
+  padding: 35px 40px;
+  margin: 0 0 30px 0;
+
+  &.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    border: none;
+  }
+}

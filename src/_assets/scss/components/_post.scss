@@ -1,0 +1,16 @@
+.post {
+  position: relative;
+  width: 80%;
+  max-width: 45rem; // 710px base
+  margin: 0 auto;
+  padding: 3rem 0;
+  border-bottom: 1px solid #eee;
+  line-height: 2rem;
+
+  &.post-content {
+    padding-bottom: 0;
+    border-bottom: none;
+    margin-top: 0;
+    z-index: 1;
+  }
+}
