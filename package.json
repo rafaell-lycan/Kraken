@@ -8,8 +8,7 @@
     "postinstall": "bower instal",
     "clean": "gulp clean",
     "build": "npm run clean && bundle exec jekyll build && gulp",
-    "dev": "npm run clean && (bundle exec jekyll serve --watch --incremental --drafts & NODE_ENV=development gulp & browser-sync start --server=dist --files=dist/**/*.{html,js,css,jpg,jpeg,gif,png,svg,ogv,mp4} --no-open --no-notify --logLevel=info --port=${PORT:-4000})",
-    "prod": "export NODE_ENV=production && export JEKYLL_ENV=production && npm run build"
+    "dev": "npm run clean && (bundle exec jekyll serve --watch --incremental --drafts & NODE_ENV=development gulp & browser-sync start --server=dist --files=dist/**/*.{html,js,css,jpg,jpeg,gif,png,svg,ogv,mp4} --no-open --no-notify --logLevel=info --port=${PORT:-4000})"
   },
   "keywords": [
     "jekyll",
