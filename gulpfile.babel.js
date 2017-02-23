@@ -20,6 +20,7 @@ gulp.task('default', () => {
   let seq = ['images', 'svgs', 'videos', 'fonts', 'styles', 'scripts'];
 
   if (config.env.debug) seq.push('watch');
+  if (!config.env.debug) seq.push('rev');
   sequence.apply(null, seq);
 });
 

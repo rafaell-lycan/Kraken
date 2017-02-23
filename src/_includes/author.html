@@ -1,0 +1,16 @@
+<section class="author container" itemprop="author">
+  <div class="author__content" itemscope itemtype="http://schema.org/Person">
+    <div class="author__pic">
+      <img src="http://gravatar.com/avatar/{{site.author.gravatar}}?s=150" alt="{{site.name}}" itemprop="image" class="img-rounded">
+    </div>
+    <div class="author__bio">
+      <h3 class="author__name" itemprop="name"></h3>
+      <p>
+        {{ site.author.description }}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quasi aperiam architecto at esse vitae odio explicabo atque, quam inventore!
+      </p>
+      <a href="mailto:{{site.email}}" class="email" itemprop="email"></a>
+      <a href="https://twitter.com/toddmotto" class="twitter-follow-button" data-show-count="true"></a>
+    </div>
+  </div>
+</section>

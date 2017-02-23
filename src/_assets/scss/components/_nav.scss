@@ -1,20 +1,31 @@
 .nav {
-  margin-left: auto;
+  text-align: center;
+  flex: 1;
+  order: 2;
+  flex-basis: 100%;
+  transition: background-color .3s ease;
+
+  // @include media('medium') {
+    order: 0;
+    flex-basis: initial;
+  // }
 
   &__list {
-    font-size: 1rem;
-    display: flex;
     margin: 0;
+    padding: 0;
     list-style: none;
-    align-items: center;
+    display: inline-flex;
   }
 
-  a:not(.btn) {
-    color: #333;
-
-    &:hover {
-      color: #45c55f;
-    }
+  a {
+    // color: #E2E6E7;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: 300;
+    letter-spacing: 1.2px;
+    font-size: 12px;
+    padding: 14px 11px;
   }
 }
 

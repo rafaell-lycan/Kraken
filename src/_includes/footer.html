@@ -1,38 +1,26 @@
-<footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
-    </div>
-
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <span class="footer__description">Made with ♥ using <a href="http://jekyllrb.com/">Jekyll</a> &amp; <a href="https://github.com/rafaell-lycan/kraken" title="Kraken theme by Rafaell Lycan">Kraken</a> · &lt;/&gt; on <a href="https://github.com/rafaell-lycan" title="Hosted on GitHub">GitHub</a></span>
+    <span class="footer__description">&copy; {{ site.time | date: '%Y' }} - {{ site.author.name }}</span>
   </div>
-
 </footer>
+
+{% include analytics.html %}
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script async src="https://use.fontawesome.com/81e129060e.js"></script>
+<script>
+  'use strict';
+  WebFont.load({
+    google: {
+      families: [
+        'Merriweather:300,300i,900,900i',
+        'Open Sans:400,800',
+        'Fira Mono: 400',
+      ]
+    }
+  });
+
+  if ('serviceWorker' in navigator) {
+    // navigator.serviceWorker.register('/assets/scripts/service-worker.js');
+  }
+</script>

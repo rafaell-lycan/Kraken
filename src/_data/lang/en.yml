@@ -1,0 +1,15 @@
+name: en
+url_base: "/en/"
+nav:
+  home:
+    name: "Home"
+    url: "/en/"
+  projects:
+    name: "Projects"
+    url: "/en/projects/"
+  about:
+    name: "About"
+    url: "/en/about/"
+  contact:
+    name: "Contact"
+    url: "/en/contact/"

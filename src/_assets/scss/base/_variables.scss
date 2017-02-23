@@ -1,28 +1,52 @@
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+/**
+ * Variables
+ */
+
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
-
 $spacing-unit:     30px;
+$content-width:    40em;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$base-font-family: 'Merriweather', 'PT Serif', Georgia, Cambria, 'Times New Roman', Times, serif;
+$heading-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
+$breakpoints: (
+    'small-only' '(max-width: 30rem)',
+    'small' '(min-width: 0rem)',
+    'medium' '(min-width: 48rem)',
+    'large' '(min-width: 60rem)',
+    'x-large' '(min-width: 75rem)'
+) !default;
 
 /**
  * Colors
  */
 
+$black:            #333;
+$white:            #fff;
+
+$green:            #45c55f;
+
+$blue:             #0074d9;
+$cyan:             #1ea3ff;
+$navy:             #4c66a4;
+
+$red:              #da393f;
+$tomato:           #f53;
+
+// grays
+$gray:             #939aa1;
+$lightgray:        #c0d3da;
+$hairline:         #eef3fa;
+
+
+// base colors
+$base-color: $blue;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
-$black:            #333;
-$green:            #333;
-$green2:           #333;
+// base colors variations
+$base-light:      lighten($base-color, 10%);
+$base-dark:       darken($base-color, 10%);

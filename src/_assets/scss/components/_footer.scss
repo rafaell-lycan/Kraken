@@ -1,0 +1,17 @@
+.footer {
+  font-size: 0.8em;
+  padding: 0 0 1rem;
+  color: #777;
+  // background-color: #fafafa;
+  font-family: $heading-font-family;
+  // border-top: 1px solid #f3f3f3;
+  text-align: center;
+
+  &__description {
+    display: block;
+  }
+
+  a {
+    font-weight: bold;
+  }
+}

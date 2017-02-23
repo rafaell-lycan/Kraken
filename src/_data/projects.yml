@@ -1,0 +1,11 @@
+- name: Kraken
+  description: The minimal Jekyll theme you ever need!
+  url: http://github.com/rafaell-lycan
+
+- name: React Music Player
+  description: An awesome player build with React and SoundCloud API
+  url: http://github.com/rafaell-lycan
+
+- name: Star Wars Opening Crawl
+  description: If you really like star wars opening, imagine now on webstandards
+  url: http://github.com/rafaell-lycan

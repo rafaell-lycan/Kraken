@@ -1,7 +1,48 @@
 .header{
-  display: block;
-  font-family: Circular Std, Helvetica Neue, Helvetica, Arial, sans-serif;
-  padding: 20px 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  // color: white;
+  font-weight: 300;
+  font-family: 'Poppins Light',sans-serif;
+  font-size: 12px;
+  // position: fixed;
+  min-height: 59px;
+  width: 100%;
+  flex-wrap: wrap;
+  z-index: 4;
+  transition: background-color .3s ease;
+  will-change: transform;
+
+  &__brand {
+    // color: white;
+    font-weight: 700;
+    font-size: 28px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    font-family: 'Neuzeit Grotesk Bold',sans-serif;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    padding-right: 12px;
+    margin-left: auto;
+  }
+
+  svg {
+    width: 32px;
+    height: 32px;
+    fill: red;
+  }
+
+  &.transparent {
+    background: transparent;
+  }
+
+  padding-top: 32px;
+  padding-bottom: 64px;
 
   .container {
     display: flex;
@@ -45,7 +86,7 @@
 .page-title {
   margin: 10px auto;
   font-size: 3rem;
-  color: #fff;
+  color: $white;
   width: 80%;
   max-width: 45rem;
   position: relative;
@@ -66,29 +107,5 @@
 @media only screen and (max-width: 480px) {
   .page-title {
     font-size: 1.875rem;
-  }
-}
-
-@-webkit-keyframes fade-in-down {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-@keyframes fade-in-down {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

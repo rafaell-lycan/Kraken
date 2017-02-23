@@ -1,42 +1,80 @@
-# Site wide configuration
-
-source           : src
-destination      : dist
-
-title            : Your awesome title
-description      : Your awesome description right here!
+# site settings
+title            : Blog Title
+description:     > # this means to ignore newlines until "baseurl:"
+  Your awesome description right here!
+baseurl          : '' # the subpath of your site, e.g. /blog
+url              : 'http://yourdomain.com' # the base hostname & protocol for your site
 logo             : site-logo.png
-locale           : en_US
+rss              : 'http://feeds.feedburner.com/MikeFowler'
 
-baseurl: ""
-url: "http://yourdomain.com"
-
-# Site owner
+# user settings
 author:
   name           : Rafaell Lycan
   email          : sonny.webdsg@gmail.com
   twitter        : RafaellLycan
   github         : rafaell-lycan
   avatar         : avatar.jpg # 160x160 px image for author byline
+  gravatar       : dd1c977c7a3e384a9cdae3b5ddd9b006 # Gravatar md5 hash
+
+disqus_username:  'rafaelllycan' # Put your Disqus Username here
+theme_config:
+  google_analytics: UA-XXXXXXX-X # Put your Google Analytics code
+  google_verify:    epFgX0s_0RM3CdjwFcsewfXzPov2g8s9ZBOLyaIUH-o # Put your Google Verification here
 
 # Jekyll configuration
-
-permalink        : pretty
-paginate         : 10
-paginate_path    : 'page:num'
-excerpt_separator: ''
-lsi              : false
-future           : true
-show_drafts      : true
-limit_posts      : 10
+permalink        : /:year/:title/ # default it's pretty
+paginate         : 3
+paginate_path    : '/page-:num/'
 highlighter      : rouge
 markdown         : kramdown
+timezone         : 'America/Sao_Paulo'
 
+# translate settings
+default_lang: "pt"
+
+# default layout settings
+defaults:
+  -
+    scope:
+      path:         ""
+    values:
+      layout:       "default"
+  -
+    scope:
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      type:         "posts"
+    values:
+      layout:       "post"
+
+# build settings
+source           : src
+destination      : dist
+
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+
+# plugins
+gems:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+
+# exclude/include files on the build phase
 keep_files:
   - .git
+
 include:
   - .htaccess
   - _pages
+
 exclude:
   - .asset-cache
   - .bundle
@@ -51,10 +89,3 @@ exclude:
   - _assets
   - README
   - tmp
-
-# Plugins
-
-gems:
-  - jekyll-feed
-  - jekyll-paginate
-  - jekyll-sitemap
