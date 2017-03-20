@@ -4,12 +4,12 @@ nav:
   home:
     name: "Home"
     url: "/en/"
+  articles:
+    name: "Articles"
+    url: "/en/articles"
   projects:
     name: "Projects"
     url: "/en/projects/"
   about:
     name: "About"
     url: "/en/about/"
-  contact:
-    name: "Contact"
-    url: "/en/contact/"
