@@ -1,52 +1,26 @@
 .header{
-  top: 0;
-  display: flex;
-  align-items: center;
-  // color: white;
-  font-weight: 300;
-  font-family: 'Poppins Light',sans-serif;
-  font-size: 12px;
-  // position: fixed;
-  min-height: 59px;
   width: 100%;
-  flex-wrap: wrap;
-  z-index: 4;
-  transition: background-color .3s ease;
-  will-change: transform;
+  margin-bottom: rem(60);
+  background-color: $base-dark;
+  background-image: linear-gradient(to bottom right, rgba($base-color,0.9), rgba($base-dark,0.9));
+  font-family: $heading-font-family;
+  color: white;
 
-  &__brand {
-    // color: white;
-    font-weight: 700;
-    font-size: 28px;
-    text-decoration: none;
-    letter-spacing: 2px;
-    padding: 10px 20px;
-    font-family: 'Neuzeit Grotesk Bold',sans-serif;
+  .author {
+    margin: 0 auto;
+    max-width: $content-width;
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+    animation: fade 600ms ease;
   }
 
-  &__social {
-    display: flex;
-    align-items: center;
-    padding-right: 12px;
-    margin-left: auto;
+  img {
+    min-width: 120px;
   }
 
-  svg {
-    width: 32px;
-    height: 32px;
-    fill: red;
-  }
-
-  &.transparent {
-    background: transparent;
-  }
-
-  padding-top: 32px;
-  padding-bottom: 64px;
-
-  .container {
-    display: flex;
-    align-items: center;
+  p {
+    color: inherit;
   }
 }
 

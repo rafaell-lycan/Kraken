@@ -82,5 +82,11 @@
 
   .btn {
     color: $white;
+    border-color: $white;
+
+    &:hover {
+      color: $black;
+      background: $white;
+    }
   }
 }

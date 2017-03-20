@@ -3,7 +3,7 @@ layout: default
 ---
 <article class="post single" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="main-header post-header" style="background-image: url(https://blog.phusion.nl/content/images/2016/07/Heroku.png)">
+<!--   <header class="main-header post-header" style="background-image: url(https://blog.phusion.nl/content/images/2016/07/Heroku.png)">
     <div class="covering-overlay"></div>
     <div class="main-nav overlay"></div>
     <div class="vertical">
@@ -18,7 +18,7 @@ layout: default
       </span>
       {% endif %}
     </div>
-  </header>
+  </header> -->
 
   <header class="post__header container">
     <h1 class="post__title" itemprop="name headline">
@@ -47,14 +47,6 @@ layout: default
     <div class="post__meta__divider"></div>
   </header>
   <section class="post__content container">
-    {% if page.updated %}
-    <span class="post__updated post__updated--block">
-    <strong>Updated {{ page.updated | date: "%b %-d, %Y" }}</strong><br>
-    {% if page.updated_notes %}
-      {{page.updated_notes}}
-    {% endif %}
-    </span>
-    {% endif %}
     {{ content }}
   </section>
 

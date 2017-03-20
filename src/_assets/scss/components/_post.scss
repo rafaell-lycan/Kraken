@@ -25,23 +25,6 @@
       padding: 0 rem(30);
     }
   }
-
-  &__updated {
-    font-size: rem(10);
-    font-family: $heading-font-family;
-    // margin-left: rem(10);
-    padding: rem(5) rem(8);
-    border-radius: 2px;
-    background-color: #fff6bf;
-    color: #8c7800;
-
-    &--block {
-      display: inline-block;
-      font-size: rem(12);
-      padding: 1rem;
-      margin-bottom: rem(30);
-    }
-  }
 }
 
 .meta-tag {

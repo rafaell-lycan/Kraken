@@ -1,5 +1,4 @@
 .wrapper {
-  min-height: 100%;
   @extend %clearfix;
 }
 
@@ -20,13 +19,13 @@
 }
 
 .section-title {
-  display: inline-block;
-  margin: 0 0 1.5rem;
-  font-size: rem(18);
-  line-height: rem(30);
-  color: #aaa;
-  border-bottom: 2px solid #eee;
-  text-transform: uppercase;
+  text-align: center;
+  font-weight: normal;
+  color: rgba(0,0,0,.12);
+}
+
+h1.section-title {
+  font-size: rem(40);
 }
 
 /**
