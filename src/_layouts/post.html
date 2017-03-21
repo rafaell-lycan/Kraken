@@ -21,9 +21,11 @@ layout: default
   </header> -->
 
   <header class="post__header container">
+    {% if page.cover %}
     <figure class="post__banner">
       <img src="https://rafaell-lycan.com/assets/img/posts/2016-review.jpg" alt="{{page.title}}" itemprop="thumbnailUrl">
     </figure>
+    {% endif %}
 
     <h1 class="post__title" itemprop="name headline">
       {{ page.title }}
