@@ -9,6 +9,19 @@
     padding-bottom: rem(30);
   }
 
+  &__banner {
+    width: auto;
+    margin: 0 -1em rem(15);
+
+    @include media('small-only') {
+      display: none;
+    }
+
+    @include media('medium') {
+      margin: 0 rem(-50) rem(30);
+    }
+  }
+
   &__content {
     position: relative;
     padding-top: rem(50);

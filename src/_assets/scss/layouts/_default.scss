@@ -1,5 +1,6 @@
 .wrapper {
   @extend %clearfix;
+  overflow: hidden;
 }
 
 .container {

@@ -1,7 +1,8 @@
 .nav {
+  position: relative;
   width: 100%;
   text-align: center;
-  background-color: darken($base-color, 25%);
+  background-color: $midnight;
 
   @include media('medium') {
 

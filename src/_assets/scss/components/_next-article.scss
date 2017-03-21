@@ -6,6 +6,7 @@
   color: inherit;
   text-shadow: 0 1px 1px rgba(0,0,0,0.5);
   margin: rem(100) 0 0;
+  box-shadow: 0 10px 50px rgba(0,0,0,.12);
 
   @include media('medium') {
     margin-left: rem(60);
@@ -13,8 +14,8 @@
   }
 
   background:
-  linear-gradient(to right, rgba($base-color,0.9), rgba(darken($base-color, 20%),0.9)),
-  linear-gradient(177deg, rgba(lighten($base-color, 20%),0), rgba($base-color,0.9)),
+  linear-gradient(to bottom right, rgba($season,0.9), rgba(darken($base-color, 20%),0.9)),
+  linear-gradient(175deg, rgba(lighten($violet, 20%),0), rgba($season,0.9)),
   $base-color;
 
   &--with-cover {
