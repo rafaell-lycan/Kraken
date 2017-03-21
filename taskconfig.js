@@ -137,5 +137,8 @@ export default {
       files: path.join(paths.src, assets.origin, 'scss', '**', '*.{sass,scss}'),
       tasks: ['styles']
     }]
+  },
+  deploy: {
+    path: path.join(paths.dest, '**', '*')
   }
 };
