@@ -21,11 +21,14 @@ layout: default
   </header> -->
 
   <header class="post__header container">
+    <figure class="post__banner">
+      <img src="https://rafaell-lycan.com/assets/img/posts/2016-review.jpg" alt="{{page.title}}" itemprop="thumbnailUrl">
+    </figure>
+
     <h1 class="post__title" itemprop="name headline">
       {{ page.title }}
     </h1>
     <div class="post__meta">
-
       {% if page.author %}
       <span class="post__date" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <span itemprop="name">By {{ page.author }} on</span>
