@@ -8,6 +8,9 @@
 {% include analytics.html %}
 <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 <script async src="https://use.fontawesome.com/81e129060e.js"></script>
+<script src="https://npmcdn.com/headroom.js@0.9.3/dist/headroom.min.js"></script>
+<!-- <script src="{{ "/assets/scripts/vendor.js" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>
+<script src="{{ "/assets/scripts/main.min.js" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script> -->
 <script>
   'use strict';
   WebFont.load({
@@ -20,7 +23,10 @@
     }
   });
 
-  if ('serviceWorker' in navigator) {
-    // navigator.serviceWorker.register('/assets/scripts/service-worker.js');
+  if ('serviceWorker' in navigator && (window.location.protocol === 'https:' || window.location.hostname === 'localhost')) {
+    navigator.serviceWorker
+      .register('/sw.js')
+      .then(function(registration){console.log('Service Worker Registered.')})
+      .catch(function(error){console.log('Error during service worker registration:', error)});
   }
 </script>
