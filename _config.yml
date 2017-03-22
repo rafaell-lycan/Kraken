@@ -1,8 +1,8 @@
 # site settings
-title            : Blog Title
+title            : Rafaell Lycan
 description:     > # this means to ignore newlines until "baseurl:"
   Your awesome description right here!
-baseurl          : '' # the subpath of your site, e.g. /blog
+baseurl          : 'https://rafaell-lycan.com/Kraken' # the subpath of your site, e.g. /blog
 url              : 'http://yourdomain.com' # the base hostname & protocol for your site
 logo             : site-logo.png
 rss              : 'http://feeds.feedburner.com/MikeFowler'
@@ -23,7 +23,7 @@ theme_config:
 
 # Jekyll configuration
 permalink        : /:year/:title/ # default it's pretty
-paginate         : 3
+paginate         : 5
 paginate_path    : '/page-:num/'
 highlighter      : rouge
 markdown         : kramdown
