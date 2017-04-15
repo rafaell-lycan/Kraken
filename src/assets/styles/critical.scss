@@ -1,0 +1,20 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+@import
+  "base/variables",
+  "base/functions",
+  "base/mixins",
+  "base/normalize",
+  "base/base",
+
+  "helpers/animations",
+
+  "components/header",
+  "components/nav",
+
+  "components/author"
+;

@@ -2,7 +2,7 @@
 title            : Rafaell Lycan
 description:     > # this means to ignore newlines until "baseurl:"
   Your awesome description right here!
-baseurl          : 'https://rafaell-lycan.com/Kraken' # the subpath of your site, e.g. /blog
+baseurl          : '' # the subpath of your site, e.g. /blog
 url              : 'http://yourdomain.com' # the base hostname & protocol for your site
 logo             : site-logo.png
 rss              : 'http://feeds.feedburner.com/MikeFowler'
@@ -49,17 +49,27 @@ defaults:
       type:         "posts"
     values:
       layout:       "post"
+  -
+    scope:
+      path:         "tag"
+    values:
+      layout:       "tag"
 
 # build settings
 source           : src
 destination      : dist
 
+sass:
+  sass_dir: assets/_sass
+  compressed: true
+
 # html minify
 compress_html:
   clippings: all
   comments: all
-  endings: []
+  endings: all
   profile: false
+  startings: [head, body]
 
 # plugins
 gems:

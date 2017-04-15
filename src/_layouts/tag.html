@@ -1,0 +1,42 @@
+---
+layout: default
+---
+{% assign tag = site.data.tags[page.tag] %}
+
+{% if tag %}
+  {% assign posts = site.tags[page.tag] %}
+  <article class="post single">
+
+    <header class="post__header container">
+      <h1 class="alpha post__title" itemprop="name headline">
+        {{ tag.name }}
+      </h1>
+      <h2>
+      {% if tag.description %}
+        {{ tag.description }}
+      {% else %}
+        A {{ paginator.total_posts }}-post collection
+      {% endif %}
+      </h2>
+    </header>
+
+    <div class="page__content container">
+      <ul class="post-list post-list--inline">
+        {% for post in site.posts %}
+          {% for tagItem in post.tags %}
+            {% if tagItem == page.tag %}
+            <li class="post-list__item">
+              <a class="post-list__link" href="{{ post.url | prepend: site.baseurl }}">
+                <h3 class="post-list__title">{{post.title}}</h3>
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{post.date | date: "%b %-d, %Y"}}</time>
+              </a>
+            </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+      {{ content }}
+    </div>
+
+  </article>
+{% endif %}

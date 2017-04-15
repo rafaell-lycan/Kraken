@@ -1,0 +1,72 @@
+.split-layout {
+
+  &__sidebar {
+    display: block;
+    padding: rem(100) 0;
+    background-color: $midnight;
+    // background-image: url("http://web.archive.org/web/20160217231933im_/http://rafaell-lycan.com/assets/img/bg-triangles-black.svg");
+    font-family: $heading-font-family;
+    color: white;
+
+    @include media('medium') {
+      position: fixed;
+      width: 30rem;
+      height: 100%;
+      left: 0;
+    }
+  }
+
+  &__content {
+    padding-top: rem(30);
+    padding-bottom: rem(30);
+
+    @include media('medium') {
+      margin-left: 30rem;
+      width: auto;
+      max-width: 100%;
+    }
+  }
+
+  .author {
+    margin: 0 auto;
+    max-width: $content-width;
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+    animation: fade 600ms ease;
+    text-align: center;
+  }
+
+  .author__name {
+    font-size: rem(30);
+    font-weight: 300;
+  }
+
+  .author__description {
+    font-size: rem(14);
+    margin-top: 0;
+    // text-transform: uppercase;
+  }
+
+  img {
+    width: 120px;
+  }
+
+  p {
+    color: inherit;
+
+    @include media('small-only') {
+      display: none;
+    }
+  }
+
+  .section-title {
+    display: none;
+  }
+
+  .post-list {
+    &:before, &:after {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+---
+layout: compress
+---
+<!doctype html>
+<html>
+  {% if page.lang %}
+    {% assign lang = {{page.lang}} %}
+  {% else %}
+    {% assign lang = {{site.default_lang}} %}
+  {% endif %}
+  {% include head.html %}
+  <body class="split-layout">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+      <p>
+        You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+      </p>
+    </div>
+  <![endif]-->
+
+    <!-- {% include header.html %} -->
+    <sidebar class="split-layout__sidebar">
+      <section class="author animate">
+        <a href="{{ site.data.lang[lang].url_base | prepend: site.baseurl }}"
+          class="header__brand" itemscope itemtype="http://schema.org/Organization"
+          itemprop="url">
+          <img class="img-rounded"
+                src="http://web.archive.org/web/20160216110737im_/http://rafaell-lycan.com/assets/img/rafaell-lycan.jpg"
+                alt="{{site.title}}"
+                itemprop="image">
+        </a>
+        <h1 class="author__name">Hi there, I'm Rafaell</h1>
+        <h2 class="author__description">
+          Front-End Developer
+        </h2>
+<!--         <p class="author__bio">
+          Hello there! I'm a brazilian software developer currently living on the beautiful Barcelona and this is where I (randomly) write about programming, the web, life and/or photography.
+        </p> -->
+      </section>
+    </sidebar>
+    <main class="split-layout__content container wrapper">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </body>
+</html>
