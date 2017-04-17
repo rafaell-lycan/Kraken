@@ -60,7 +60,6 @@ source           : src
 destination      : dist
 
 sass:
-  sass_dir: assets/_sass
   compressed: true
 
 # html minify

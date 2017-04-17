@@ -51,5 +51,8 @@
     "run-sequence": "^1.2.2",
     "shelljs": "^0.7.4",
     "webpack": "^1.13.3"
+  },
+  "dependencies": {
+    "linkjuice": "^1.0.1"
   }
 }

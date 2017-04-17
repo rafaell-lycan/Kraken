@@ -57,7 +57,7 @@ export default {
     debug: env.debug,
     devtool: env.debug ? 'eval' : null,
     entry: {
-      'vendor': glob.sync(path.join(paths.src, assets.origin, 'vendor', '**', '*.js')),
+      // 'vendor': glob.sync(path.join(paths.src, assets.origin, 'vendor', '**', '*.js')),
       'main': './main.js'
     },
     output: {
@@ -86,7 +86,7 @@ export default {
         loader: 'json',
       }],
       noParse: [
-        new RegExp(`${path.join(paths.src, assets.origin, 'vendor')}.*.js$`)
+        // new RegExp(`${path.join(paths.src, assets.origin, 'vendor')}.*.js$`)
       ]
     },
     resolve: {
@@ -99,7 +99,7 @@ export default {
       },
     },
     plugins: [
-      new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
+      // new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
       new webpack.optimize.OccurrenceOrderPlugin(),
       new webpack.optimize.AggressiveMergingPlugin(),
       new webpack.optimize.UglifyJsPlugin({
