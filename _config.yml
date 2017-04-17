@@ -73,7 +73,6 @@ compress_html:
 
 # plugins
 gems:
-  - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
 

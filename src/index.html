@@ -3,9 +3,9 @@ layout: sidebar
 ---
 <div class="page container">
 
-  <h1 class="section-title">Recent Articles</h1>
+  <!-- <h1 class="section-title">Recent Articles</h1> -->
 
-  <ul class="post-list post-list--featured">
+  <ul class="post-list">
     {% for post in paginator.posts %}
       <li class="post-list__item">
         <a class="post-list__link" href="{{ post.url | prepend: site.baseurl }}">
@@ -38,9 +38,13 @@ layout: sidebar
     {% endfor %}
   </ul>
 
-<!--   <h1 class="section-title">Latest Projects</h1>
+  <!-- <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn--outline" title="Read {{ post.title }}">
+    Read more →
+  </a> -->
 
-  <ul class="post-list">
+  <!-- <h1 class="section-title">Latest Projects</h1> -->
+
+  <!-- <ul class="post-list">
     {% for projects in site.data.projects %}
       <li class="post-list__item">
         <a class="post-list__link" href="{{ projects.url}}">
@@ -53,8 +57,8 @@ layout: sidebar
     {% endfor %}
   </ul> -->
 
-  <!--   <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn--outline" title="Read {{ post.title }}">
-      Read more →
-    </a> -->
+  <!-- <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn--outline" title="Read {{ post.title }}">
+    Read more →
+  </a> -->
 
 </div>

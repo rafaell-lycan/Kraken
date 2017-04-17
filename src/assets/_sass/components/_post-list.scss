@@ -65,7 +65,11 @@
     }
 
     .post-list__title {
-      font-size: rem(42);
+
+
+      @include media('large') {
+        font-size: rem(42);
+      }
     }
 
     &:before, &:after {
